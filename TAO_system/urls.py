@@ -16,6 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from apps.adopcion import views as posts_views
+from apps.gestion_mascotas import views as gest_mascotas
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+
+    path('patitas-callejeras/', posts_views.list_posts),
+
+    path('', gest_mascotas.principal),
+
+    
 ]
