@@ -18,13 +18,25 @@ from django.urls import path
 
 from apps.adopcion import views as posts_views
 from apps.gestion_mascotas import views as gest_mascotas
+from apps.gestion_mascotas import views as gest_mascotas
 
 urlpatterns = [
+
+# Admin de Django    
     path('admin/', admin.site.urls),
 
-    path('patitas-callejeras/', posts_views.list_posts),
+#Url de pagina principal, publica
+    path('', posts_views.list_posts),
+    path('about/', posts_views.about),
+    path('adopt-info/', posts_views.adopt_info),
+    path('services/', posts_views.services),
+    path('contact/', posts_views.contact),
 
-    path('', gest_mascotas.principal),
+
+# Url's para administracion de la aplicación
+    path('tao_log/', gest_mascotas.log),
+
+    path('tao_admin/', gest_mascotas.principal),
 
     
 ]
