@@ -4,8 +4,7 @@ from django.http import HttpResponse
 # Create your views here.
 
 def list_posts(request):
-    home = "Inicio"
-    return HttpResponse(home)
+    return render(request, 'post_mascotas/index.html')
 
 def about(request):
     about_us = "Sobre nosotros"
@@ -22,3 +21,4 @@ def contact(request):
 def adopt_info(request):
     info = "Informacion adopcion"
     return HttpResponse(info)
+
