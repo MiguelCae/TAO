@@ -36,7 +36,8 @@ urlpatterns = [
 # Url's para administracion de la aplicación
     path('tao_log/', gest_mascotas.log),
 
-    path('tao_admin/', gest_mascotas.principal),
+    path('tao_admin/', gest_mascotas.workflow),
+
 
     
 ]
